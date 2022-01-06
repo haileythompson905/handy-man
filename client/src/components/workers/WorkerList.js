@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
-import { useState } from 'react;'
+// import { useState } from 'react;'
 import Worker from './Worker';
 
 
 const WorkerList = ({ workers, updateWorker, deleteWorker }) => {
-  const [ editing, setEdit ] = useState(false)
+  // const [ editing, setEdit ] = useState(false)
   return (
     <>
       { workers.map( w => 
