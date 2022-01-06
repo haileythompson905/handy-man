@@ -7,8 +7,8 @@ const Worker = ({ id, name, title, number, updateWorker, deleteWorker }) => {
     return (
         <>
             <h2>{name}</h2>
-            <h3>{number}</h3>
             <h3>{title}</h3>
+            <h3>{number}</h3>
             {
                 editing ?
                 <>

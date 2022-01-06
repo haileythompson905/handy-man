@@ -33,7 +33,7 @@ class Api::WorkersController < ApplicationController
 
     private
      def worker_params
-        params.require(:worker).permit(:name, :number)
+        params.require(:worker).permit(:name, :title, :number)
     end
 
     def set_worker

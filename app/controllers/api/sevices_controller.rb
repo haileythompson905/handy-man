@@ -11,7 +11,7 @@ def show
 end
 
 def create
-    @service = @worker.services.new(post_params)
+    @service = @worker.services.new(service_params)
     if @service.save
         render json: @service
     else
@@ -20,7 +20,7 @@ def create
 end
 
 def update
-    if @service.update(post_params)
+    if @service.update(service_params)
         render json: @service
     else
         render json: { errors: @service.errors }, status: :unprocessable_entity
@@ -33,7 +33,7 @@ def destroy
 end
 
 private
-    def post_params
+    def service_params
         params.require(:service).permit(:type, :mins, :desc)
     end
 

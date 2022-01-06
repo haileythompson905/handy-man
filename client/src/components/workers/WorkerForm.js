@@ -1,7 +1,7 @@
 import { useState, useEffect} from 'react';
 
 const WorkerForm = ({ addWorker, id, name, title, number, updateWorker, setEdit }) => {
-    const [worker, setWorker] = useState({ name: '', number: '', title: ''})
+    const [worker, setWorker] = useState({ name: '', title: '', number: ''})
 
 
     useEffect( () => {
