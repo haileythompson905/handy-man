@@ -18,7 +18,7 @@ const WorkerForm = ({ addWorker, id, name, title, number, updateWorker, setEdit 
         } else {
         addWorker(worker)
         }
-        setWorker({ name: '', number: '', title: ''})
+        setWorker({ name: '', title: '', number: ''})
     }
 
     return (

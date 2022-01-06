@@ -14,7 +14,8 @@ useEffect( () => {
 
 const addService = (service) => {   
     axios.post(`/api/workers/${workerId}/services`, { service })
-    .then( res => setServices([ ...services, res.data]))
+    .then( res => {setServices([ ...services, res.data])
+    })
     .catch( err => console.log(err))
 }
 
@@ -28,7 +29,7 @@ const deleteService = (id) => {
 }
 
 const updateService = (id, service) => {
-    axios.put(`/api/workers/${worker.id}/services/${id}`, { service })
+    axios.put(`/api/workers/${workerId}/services/${id}`, { service })
     .then( res => {
         const newUpdatedServices = service.map( s => {
             if (s.id === id) {
@@ -44,7 +45,7 @@ const updateService = (id, service) => {
 
 return (
     <>
-    <h1>Services</h1>
+    <h1>About</h1>
     <ServiceForm addService={addService} />
     <ServiceList 
     services={services} 

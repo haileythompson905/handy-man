@@ -1,4 +1,4 @@
-class Api::SevicesController < ApplicationController
+class  Api::ServicesController < ApplicationController
 before_action :set_worker
 before_action :set_post, only: [:show, :update, :destroy]
 
